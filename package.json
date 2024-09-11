@@ -1,12 +1,11 @@
 {
-  "homepage": "https://bryanooko738.github.io/Frontend3"
-,
-  "name": "frontend3",
+  "homepage": "https://BRYANOOKO738.github.io/E-cormerce",
+  "name": "frontend",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "predeploy":"npm run build",
+    "predeploy":"npm run biuld",
     "deploy":"gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
@@ -20,7 +19,6 @@
     "@stripe/stripe-js": "^4.4.0",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
-    "gh-pages": "^6.1.1",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.4",
     "react-dom": "^18.3.1",
@@ -39,6 +37,7 @@
     "eslint-plugin-react": "^7.35.0",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.9",
+    "gh-pages": "^6.1.1",
     "globals": "^15.9.0",
     "vite": "^5.4.0"
   }
