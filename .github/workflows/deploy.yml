@@ -16,18 +16,20 @@ jobs:
 
       - name: Setup Node
         uses: actions/setup-node@v3
+        with:
+          node-version: '18' # Specify the Node.js version you are using
 
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
 
       - name: Build project
-        run: npm run build
+        run: npm run build # Ensure this command builds correctly
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v3
         with:
           name: production-files
-          path: ./dist
+          path: ./build # Update this if your build directory is different
 
   deploy:
     name: Deploy
@@ -40,10 +42,11 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: production-files
-          path: ./dist
+          path: ./build # Update this if your build directory is different
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_branch: gh-pages # Ensure this matches your GitHub Pages settings
+          publish_dir: ./build # Update this if your build directory is different
